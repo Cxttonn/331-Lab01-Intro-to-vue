@@ -29,6 +29,13 @@ createApp({
         function updateImage(variantImage){
             image.value = variantImage
         }
+        const toggleStock = () => {
+            if (inventory.value > 0) {
+                inventory.value = 0
+            } else {
+                inventory.value = 100
+            }
+        }
         return{
             product, 
             description,
@@ -43,6 +50,7 @@ createApp({
             cart,
             addToCart,
             updateImage,
+            toggleStock
         }
     }
 }).mount('#app')
