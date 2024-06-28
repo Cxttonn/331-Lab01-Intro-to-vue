@@ -168,6 +168,21 @@ ul {
 ul li{
   display: inline;
 }
+.color-circle{
+  width: 50px;
+  height: 50px;
+  margin-top: 8px;
+  border: 2px solid #d8d8d8;
+  border-radius: 50%;
+}
+.disabledButton{
+  background-color: #d8d8d8;
+  cursor: not-allowed;
+}
+
+.out-of-stock-image img {
+  filter: grayscale(100%);
+}
 
 @media only screen and (max-width: 600px) {
   .container {
