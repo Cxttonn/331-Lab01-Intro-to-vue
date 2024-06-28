@@ -16,6 +16,7 @@ const productDisplay = {
             <p>Shipping: {{shipping}}</p>
             <p v-else-if="inventory <= 10 && inventory > 0">Almost out of Stock</p>
             <p v-else>Out of Stock</p>
+            <p>Shipping: {{shipping}}</p>
             <p v-if="onSale" class="sale-message">This product is on sale!</p>
             <p v-else class="sale-message">This product is not on sale.</p>
             <ul>
