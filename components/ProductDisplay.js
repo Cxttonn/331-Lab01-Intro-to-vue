@@ -35,6 +35,7 @@ const productDisplay = {
             <button class="button" @click="toggleStock">Stock Status</button>
 
           </div>
+          <review-form @review-submitted="addReview"></review-form>
       </div>
 
     `,
@@ -78,6 +79,10 @@ const productDisplay = {
         function addToCart(){
             // cart.value += 1
             emit('add-to-cart', variants.value[selectVariant.value].id)
+        }
+        const reviews = ref([])
+        function addReview(review){
+          reviews.value.pusd(review)
         }
         const title = computed(() => {
             return brand.value + ' ' + product.value
