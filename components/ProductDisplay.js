@@ -41,15 +41,15 @@ const productDisplay = {
   props: {
     premium: Boolean
   },
-  setup(props){
-    const shipping = computed(() => {
-        if(props.premium){
-            return 'Free'
-        } else{
-            return 30
-        }
+  setup(props, {emit}){
+    // const shipping = computed(() => {
+    //     if(props.premium){
+    //         return 'Free'
+    //     } else{
+    //         return 30
+    //     }
         
-    })
+    // })
         const product = ref('Boots')
         const brand = ref('SE 331')
         // const image = ref('./assets/images/socks_green.jpg')
@@ -76,7 +76,8 @@ const productDisplay = {
         }
         const cart = ref(0)
         function addToCart(){
-            cart.value += 1
+            // cart.value += 1
+            emit('add-to-cart', variants.value[selectVariant.value].id)
         }
         const title = computed(() => {
             return brand.value + ' ' + product.value

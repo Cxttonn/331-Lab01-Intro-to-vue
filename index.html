@@ -47,7 +47,7 @@
         <button class="button" @click="toggleStock">Stock Status</button>
 
     </div> -->
-    <product-display :premium="premium"></product-display>
+    <product-display :premium="premium" @add-to-cart="updateCart"></product-display>
     </div>
 
     <!-- Import Js -->
