@@ -35,6 +35,7 @@ const productDisplay = {
             <button class="button" @click="toggleStock">Stock Status</button>
 
           </div>
+          <review-list v-if="reviews.length" :reviews="reviews"></review-list>
           <review-form @review-submitted="addReview"></review-form>
       </div>
 
@@ -119,7 +120,8 @@ const productDisplay = {
             updateImage,
             toggleStock,
             updateVariant,
-            shipping
+            shipping,
+            addReview
         }
     }
 }
