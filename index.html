@@ -31,6 +31,12 @@
 
         <p v-if="onSale" class="sale-message">This product is on sale!</p>
         <p v-else class="sale-message">This product is not on sale.</p>
+        <ul>
+            <li v-for="detail in details">{{detail}}</li>
+        </ul>
+        <div v-for="variant in variants" :key="variant.id">
+            {{variant.color}}
+        </div>
     </div>
     </div>
 
